@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('add_category');
+
     }
 
     /**
@@ -24,7 +24,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('add_category');
     }
 
     /**
@@ -35,7 +35,13 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = array(
+            'c_name' => $request->c_name,
+            'c_detils' => $request->c_details
+
+        );
+        Category::create($category);
+        echo 'data added';
     }
 
     /**
