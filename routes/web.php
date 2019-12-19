@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/blank', 'HomeController@blank')->name('blank');
+Route::get('/add_category', 'CategoryController@index')->name('add_category');
